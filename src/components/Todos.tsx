@@ -10,7 +10,7 @@ type TodoProps = {
 
 function Todo({ removeTodo, toggleTodo }: TodoProps, todo: TodoType) {
   return (
-    <div>
+    <div key={todo[2]}>
       <input
         type="checkbox"
         checked={todo[1]}
@@ -29,7 +29,7 @@ function Todo({ removeTodo, toggleTodo }: TodoProps, todo: TodoType) {
 export default function Todos(props: TodoProps) {
   return (
     <div className={styles.todos}>
-      {React.Children.toArray(props.todos.map((value) => Todo(props, value)))}
+      {props.todos.map((value) => Todo(props, value))}
     </div>
   );
 }
