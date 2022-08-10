@@ -22,10 +22,9 @@ export default function Home({}) {
     }
   }, []);
 
-  function saveTodos() {
+  useEffect(() => {
     setItem("todos", JSON.stringify(todos));
-    console.log(getItem("todos"));
-  }
+  }, [todos]);
 
   function toggleTodo(key: string) {
     setTodos((todos) =>
@@ -48,7 +47,6 @@ export default function Home({}) {
   function addTodo(todo: string) {
     setTodos([...todos, [todo, false, uuidv4()]]);
     setTitle("");
-    setItem("todos", JSON.stringify(todos));
   }
 
   return (
@@ -62,7 +60,6 @@ export default function Home({}) {
       <main className={styles.main}>
         <h1 className={styles.title}>Todo app</h1>
 
-        <button onClick={saveTodos}>Save</button>
         <button onClick={removeTodos}>Clear</button>
 
         <Form title={title} setTitle={setTitle} addTodo={addTodo} />
