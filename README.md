@@ -1,4 +1,4 @@
-# Todo app using Next.js with Bun runtime
+# Bun demo app
 
 This is a Todo app using [Next.js](https://nextjs.org/) bootstrapped with Bun.
 
