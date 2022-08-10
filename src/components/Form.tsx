@@ -7,7 +7,7 @@ type FormProps = {
   addTodo: (todo: string) => void;
 };
 
-export default function Form({ title, setTitle, addTodo }: FormProps) {
+function Form({ title, setTitle, addTodo }: FormProps) {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     addTodo(title);
 
@@ -28,3 +28,5 @@ export default function Form({ title, setTitle, addTodo }: FormProps) {
     </form>
   );
 }
+
+export default React.memo(Form);
