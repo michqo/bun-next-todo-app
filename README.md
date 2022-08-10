@@ -7,7 +7,7 @@ This is a Todo app using [Next.js](https://nextjs.org/) bootstrapped with Bun.
 ### Cloning the repo
 
 ```sh
-bun create next ./app
+git clone https://github.com/MichalUSER/bun-next-todo-app.git
 ```
 
 First, run the development server:
