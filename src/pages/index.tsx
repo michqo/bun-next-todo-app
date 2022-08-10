@@ -45,6 +45,7 @@ export default function Home({}) {
   }
 
   function addTodo(todo: string) {
+    if (todo.length == 0 || todo.length >= 12 || todo[0] == " ") return;
     setTodos([...todos, [todo, false, uuidv4()]]);
     setTitle("");
   }
