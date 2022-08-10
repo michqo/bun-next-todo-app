@@ -1,6 +1,8 @@
 :root {
-  --green: #0ad04c;
-  background-color: #dededf;
+  --main: #2f2f30;
+  --white: #f4f4f5;
+  --hover: #e2e2e5;
+  --accent: #03045e;
 }
 
 .container {
@@ -22,6 +24,26 @@
   gap: 1rem;
 }
 
+.title {
+  line-height: 1.15;
+  font-size: 5rem;
+  color: var(--accent);
+}
+
+.clear {
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  background: transparent;
+  cursor: pointer;
+}
+.clear:focus {
+  outline: solid;
+  outline-color: var(--accent);
+  outline-width: 2px;
+}
+
 .form {
   /* margin: 0 2rem; */
   display: flex;
@@ -32,29 +54,62 @@
 
 .form input[type="submit"],
 .form input[type="text"] {
-  border: solid var(--green) 2px;
+  border: solid var(--main) 2px;
   border-radius: 0.2rem;
+  background: transparent;
+  font-size: 1rem;
 }
 
+/* Override browser autocomplete highlighting */
+.form input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px var(--white) inset;
+  -webkit-text-fill-color: #333;
+}
 .form input[type="text"] {
-  padding: 0.3rem 0.2rem;
-  margin-left: 1rem;
+  padding: 0.5rem 0.4rem;
+  margin-left: 0.5rem;
 }
 
 .form input[type="submit"] {
-  padding: 0.3rem 0.5rem;
-  margin: 0;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+}
+.form input[type="submit"]:focus {
+  outline: solid var(--accent) 1px;
 }
 
 .todos {
-  /* margin: 0 2rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
 }
-.todos p {
-  text-align: center;
+.todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo p {
   cursor: pointer;
+  color: var(--accent);
 }
-.todos input {
-  float: left;
+.minus {
+  margin-left: 10rem;
+  border: none;
+  border-radius: 0.4rem;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 900;
+  color: #e41919;
+  padding: 0.3rem 0.5rem;
+}
+.minus:hover {
+  background-color: var(--hover);
+}
+.minus:focus {
+  outline: solid;
+  outline-width: 1px;
 }
 
 .footer {
@@ -64,9 +119,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.title {
-  line-height: 1.15;
-  font-size: 4rem;
 }

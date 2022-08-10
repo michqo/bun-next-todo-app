@@ -10,18 +10,16 @@ type TodoProps = {
 
 function Todo({ removeTodo, toggleTodo }: TodoProps, todo: TodoType) {
   return (
-    <div key={todo[2]}>
-      <input
-        type="checkbox"
-        checked={todo[1]}
-        onChange={() => toggleTodo(todo[2])}
-      />
+    <div key={todo[2]} className={styles.todo}>
       <p
         style={todo[1] ? { textDecorationLine: "line-through" } : {}}
-        onClick={() => removeTodo(todo[2])}
+        onClick={() => toggleTodo(todo[2])}
       >
         {todo[0]}
       </p>
+      <button className={styles.minus} onClick={() => removeTodo(todo[2])}>
+        X
+      </button>
     </div>
   );
 }

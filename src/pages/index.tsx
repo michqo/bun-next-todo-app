@@ -61,9 +61,10 @@ export default function Home({}) {
       <main className={styles.main}>
         <h1 className={styles.title}>Todo app</h1>
 
-        <button onClick={removeTodos}>Clear</button>
-
         <Form title={title} setTitle={setTitle} addTodo={addTodo} />
+        <button className={styles.clear} onClick={removeTodos}>
+          Clear
+        </button>
         {todos != [] && (
           <Todos
             removeTodo={removeTodo}
