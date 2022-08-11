@@ -1,8 +1,18 @@
 :root {
-  --main: #2f2f30;
+  --black: #2f2f30;
   --white: #f4f4f5;
   --hover: #e2e2e5;
   --accent: #03045e;
+}
+
+/* Grouping these selectors doesn't work */
+::-moz-selection {
+  color: var(--white);
+  background: var(--accent);
+}
+::selection {
+  color: var(--white);
+  background: var(--accent);
 }
 
 .container {
@@ -40,7 +50,7 @@
 
 .form input[type="submit"],
 .form input[type="text"] {
-  border: solid var(--main) 2px;
+  border: solid var(--black) 2px;
   border-radius: 0.2rem;
   background: transparent;
   font-size: 1rem;
@@ -74,7 +84,7 @@
 }
 .clear:focus {
   outline: solid;
-  outline-color: var(--main);
+  outline-color: var(--black);
   outline-width: 2px;
 }
 
