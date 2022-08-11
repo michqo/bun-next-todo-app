@@ -30,20 +30,6 @@
   color: var(--accent);
 }
 
-.clear {
-  border: none;
-  border-radius: 0.2rem;
-  font-size: 1.1rem;
-  text-decoration: underline;
-  background: transparent;
-  cursor: pointer;
-}
-.clear:focus {
-  outline: solid;
-  outline-color: var(--accent);
-  outline-width: 2px;
-}
-
 .form {
   /* margin: 0 2rem; */
   display: flex;
@@ -78,6 +64,20 @@
   outline: solid var(--accent) 1px;
 }
 
+.clear {
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  text-decoration: underline;
+  background: transparent;
+  cursor: pointer;
+}
+.clear:focus {
+  outline: solid;
+  outline-color: var(--main);
+  outline-width: 2px;
+}
+
 .todos {
   display: flex;
   flex-direction: column;
@@ -91,6 +91,7 @@
   justify-content: space-between;
 }
 .todo p {
+  margin: 0.6rem 0;
   cursor: pointer;
   color: var(--accent);
 }
