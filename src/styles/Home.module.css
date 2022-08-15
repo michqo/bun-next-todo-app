@@ -48,7 +48,6 @@
   gap: 0.5rem;
 }
 
-.form input[type="submit"],
 .form input[type="text"] {
   border: solid var(--black) 2px;
   border-radius: 0.2rem;
@@ -66,12 +65,31 @@
   margin-left: 0.5rem;
 }
 
-.form input[type="submit"] {
-  padding: 0.5rem 0.8rem;
+.button {
   cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  border-radius: 0.75em;
+  background: var(--black);
+  padding: 0;
 }
-.form input[type="submit"]:focus {
-  outline: solid var(--accent) 1px;
+.button:hover .button_top {
+  transform: translateY(-0.33em);
+}
+.button:active .button_top {
+  transform: translateY(0);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--black);
+  border-radius: 0.75em;
+  padding: 0.6em 1.5em;
+  background: var(--white);
+  color: var(--black);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
 }
 
 .clear {
