@@ -84,7 +84,7 @@
   display: block;
   border: 2px solid var(--black);
   border-radius: 0.75em;
-  padding: 0.6em 1.5em;
+  padding: 0.5em 1em;
   background: var(--white);
   color: var(--black);
   transform: translateY(-0.2em);
