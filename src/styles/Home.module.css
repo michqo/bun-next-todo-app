@@ -5,11 +5,6 @@
   --accent: #03045e;
 }
 
-/* Grouping these selectors doesn't work */
-::-moz-selection {
-  color: var(--white);
-  background: var(--accent);
-}
 ::selection {
   color: var(--white);
   background: var(--accent);
@@ -49,10 +44,15 @@
 }
 
 .form input[type="text"] {
-  border: solid var(--black) 2px;
+  padding: 0.5rem 0.4rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--black);
   border-radius: 0.2rem;
   background: transparent;
-  font-size: 1rem;
+}
+.form input[type="text"]:focus {
+  outline: 1px solid var(--black);
 }
 
 /* Override browser autocomplete highlighting */
@@ -65,7 +65,7 @@
   margin-left: 0.5rem;
 }
 
-.button {
+.submit {
   cursor: pointer;
   border: none;
   font-size: 1rem;
@@ -73,16 +73,15 @@
   background: var(--black);
   padding: 0;
 }
-.button:hover .button_top {
+.submit:hover .submit_top {
   transform: translateY(-0.33em);
 }
-.button:active .button_top {
+.submit:active .submit_top {
   transform: translateY(0);
 }
 
-.button_top {
+.submit_top {
   display: block;
-  box-sizing: border-box;
   border: 2px solid var(--black);
   border-radius: 0.75em;
   padding: 0.6em 1.5em;
@@ -101,9 +100,7 @@
   cursor: pointer;
 }
 .clear:focus {
-  outline: solid;
-  outline-color: var(--black);
-  outline-width: 2px;
+  outline: 2px solid var(--black);
 }
 
 .todos {

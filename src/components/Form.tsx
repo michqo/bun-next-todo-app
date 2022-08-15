@@ -24,8 +24,8 @@ function Form({ title, setTitle, addTodo }: FormProps) {
         Title
         <input type="text" name="name" value={title} onChange={onChange} />
       </label>
-      <button type="submit" className={styles.button}>
-        <span className={styles.button_top}> Submit</span>
+      <button type="submit" className={styles.submit}>
+        <span className={styles.submit_top}> Submit</span>
       </button>
     </form>
   );
