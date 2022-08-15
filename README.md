@@ -4,13 +4,13 @@ This is a Todo app using [Next.js](https://nextjs.org/) bootstrapped with Bun.
 
 ## Getting Started
 
-### Install dependencies:
+### Install dependencies
 
 ```bash
 bun install
 ```
 
-### Start the dev server:
+### Start the dev server
 
 ```bash
 bun dev
