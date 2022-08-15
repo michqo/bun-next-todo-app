@@ -4,19 +4,13 @@ This is a Todo app using [Next.js](https://nextjs.org/) bootstrapped with Bun.
 
 ## Getting Started
 
-### Cloning the repo
-
-```sh
-git clone https://github.com/MichalUSER/bun-next-todo-app.git
-```
-
-First, install dependencies:
+### Install dependencies:
 
 ```bash
 bun install
 ```
 
-Start the dev server:
+### Start the dev server:
 
 ```bash
 bun dev
