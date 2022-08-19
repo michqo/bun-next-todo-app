@@ -11,7 +11,7 @@ import { DragDropContext, DropResult } from "react-beautiful-dnd";
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
 
-export default function Home({}) {
+export default function Home({}): JSX.Element {
   const [todos, setTodos] = useState<TodosType>([]);
   const [title, setTitle] = useState("");
   const { getItem, setItem, removeItem } = useStorage();

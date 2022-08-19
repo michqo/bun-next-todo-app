@@ -1,9 +1,4 @@
-import {
-  DragDropContext,
-  Droppable,
-  Draggable,
-  DropResult,
-} from "react-beautiful-dnd";
+import { Droppable, Draggable } from "react-beautiful-dnd";
 
 import React from "react";
 import { TodosType, TodoType } from "../pages";
