@@ -117,7 +117,7 @@
 }
 .todo p {
   margin: 0.6rem 0;
-  cursor: pointer;
+  cursor: grab;
   color: var(--accent);
 }
 .minus {

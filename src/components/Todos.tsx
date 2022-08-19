@@ -46,24 +46,18 @@ function Todo(
 }
 
 export default function Todos(props: TodoProps) {
-  function onDragEnd(result: DropResult) {
-    console.log(result);
-  }
-
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
-      <Droppable droppableId="droppable">
-        {(provided) => (
-          <ul
-            {...provided.droppableProps}
-            ref={provided.innerRef}
-            className={styles.todos}
-          >
-            {props.todos.map((value, index) => Todo(props, value, index))}
-            {provided.placeholder}
-          </ul>
-        )}
-      </Droppable>
-    </DragDropContext>
+    <Droppable droppableId="droppable">
+      {(provided) => (
+        <ul
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+          className={styles.todos}
+        >
+          {props.todos.map((value, index) => Todo(props, value, index))}
+          {provided.placeholder}
+        </ul>
+      )}
+    </Droppable>
   );
 }
