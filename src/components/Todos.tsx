@@ -1,3 +1,10 @@
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "react-beautiful-dnd";
+
 import React from "react";
 import { TodosType, TodoType } from "../pages";
 import styles from "../styles/Home.module.css";
@@ -8,26 +15,49 @@ type TodoProps = {
   toggleTodo: (key: string) => void;
 };
 
-function Todo({ removeTodo, toggleTodo }: TodoProps, todo: TodoType) {
+function Todo(
+  { removeTodo, toggleTodo }: TodoProps,
+  todo: TodoType,
+  index: number
+) {
+  const key = todo[2].toString();
   return (
-    <div key={todo[2]} className={styles.todo}>
-      <p
-        style={todo[1] ? { textDecorationLine: "line-through" } : {}}
-        onClick={() => toggleTodo(todo[2])}
-      >
-        {todo[0]}
-      </p>
-      <button className={styles.minus} onClick={() => removeTodo(todo[2])}>
-        X
-      </button>
-    </div>
+    <Draggable key={key} draggableId={key} index={index}>
+      {(provided) => (
+        <li
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+          className={styles.todo}
+        >
+          <p
+            style={todo[1] ? { textDecorationLine: "line-through" } : {}}
+            onClick={() => toggleTodo(todo[2])}
+          >
+            {todo[0]}
+          </p>
+          <button className={styles.minus} onClick={() => removeTodo(todo[2])}>
+            X
+          </button>
+        </li>
+      )}
+    </Draggable>
   );
 }
 
 export default function Todos(props: TodoProps) {
   return (
-    <div className={styles.todos}>
-      {props.todos.map((value) => Todo(props, value))}
-    </div>
+    <Droppable droppableId="droppable">
+      {(provided) => (
+        <ul
+          {...provided.droppableProps}
+          ref={provided.innerRef}
+          className={styles.todos}
+        >
+          {props.todos.map((value, index) => Todo(props, value, index))}
+          {provided.placeholder}
+        </ul>
+      )}
+    </Droppable>
   );
 }
