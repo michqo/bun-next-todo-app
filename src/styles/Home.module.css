@@ -114,13 +114,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-.todo p {
   margin: 0.6rem 0;
   cursor: grab;
-  color: var(--accent);
 }
-.minus {
+.remove {
   margin-left: 10rem;
   border: none;
   border-radius: 0.4rem;
@@ -130,12 +127,37 @@
   color: #e41919;
   padding: 0.3rem 0.5rem;
 }
-.minus:hover {
+.remove:hover {
   background-color: var(--hover);
 }
-.minus:focus {
+.remove:focus {
   outline: solid;
   outline-width: 1px;
+}
+
+.hidden_checkbox {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.checkbox {
+  display: inline-block;
+  vertical-align: top; /* solve weird align */
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border: 2px #ddd solid;
+  margin-right: 4px;
+}
+
+.checkbox_active {
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
 .footer {

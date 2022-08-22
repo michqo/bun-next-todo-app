@@ -3,6 +3,7 @@ import { Droppable, Draggable } from "react-beautiful-dnd";
 import React from "react";
 import { TodosType, TodoType } from "../pages";
 import styles from "../styles/Home.module.css";
+import Checkbox from "./controls/checkbox";
 
 type TodoProps = {
   todos: TodosType;
@@ -25,13 +26,8 @@ function Todo(
           ref={provided.innerRef}
           className={styles.todo}
         >
-          <p
-            style={todo[1] ? { textDecorationLine: "line-through" } : {}}
-            onClick={() => toggleTodo(todo[2])}
-          >
-            {todo[0]}
-          </p>
-          <button className={styles.minus} onClick={() => removeTodo(todo[2])}>
+          <Checkbox todo={todo} toggleTodo={toggleTodo} />
+          <button className={styles.remove} onClick={() => removeTodo(todo[2])}>
             X
           </button>
         </li>
