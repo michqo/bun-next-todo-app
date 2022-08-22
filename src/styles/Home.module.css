@@ -115,7 +115,6 @@
   align-items: center;
   justify-content: space-between;
   margin: 0.6rem 0;
-  cursor: grab;
 }
 .remove {
   margin-left: 10rem;
