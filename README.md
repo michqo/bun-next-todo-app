@@ -36,4 +36,4 @@ You can start editing the page by modifying `src/pages/index.tsx`. The page auto
 
 ## Screenshot
 
-[screenshot](/assets/screenshot.png)
+![screenshot](/assets/screenshot.png)
