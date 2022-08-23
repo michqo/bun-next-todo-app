@@ -46,7 +46,7 @@ export default function Home({}): JSX.Element {
   }
 
   function addTodo(todo: string) {
-    if (todo.length == 0 || todo.length >= 18 || todo[0] == " ") return;
+    if (todo.length == 0 || todo.length >= 24 || todo[0] == " ") return;
     setTodos((todos) => [...todos, [todo, false, uuidv4()]]);
     setTitle("");
   }
