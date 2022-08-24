@@ -24,6 +24,12 @@ Try running
 bun bun
 ```
 
+or
+
+```
+bun bun --use next
+```
+
 and then
 
 ```
