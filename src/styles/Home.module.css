@@ -101,9 +101,12 @@ a {
   font-weight: 900;
   color: #e41919;
   padding: 0.3rem 0.5rem;
+  display: inline-block;
+  transition: all 0.1s ease-in-out;
 }
 .remove:hover {
   background-color: var(--hover);
+  transform: scale(1.2);
 }
 .remove:focus {
   outline: solid;
