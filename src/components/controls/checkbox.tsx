@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TodoType } from "src/pages";
 import styles from "../../styles/Home.module.css";
 

@@ -13,7 +13,7 @@ export default function About({}): JSX.Element {
       </Head>
 
       <Link href="/">
-        <a className={styles.top}>Back</a>
+        <a className={styles.top}>← Back</a>
       </Link>
 
       <main>
