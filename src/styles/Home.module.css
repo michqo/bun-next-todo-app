@@ -1,38 +1,12 @@
-:root {
-  --black: #2f2f30;
-  --white: #f4f4f5;
-  --hover: #e2e2e5;
-  --accent: #03045e;
-}
-
-::selection {
-  color: var(--white);
-  background: var(--accent);
-}
-
-.container {
-  min-height: 99vh;
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.title {
-  line-height: 1.15;
-  font-size: 5rem;
-  color: var(--accent);
+a {
+  border: none;
+  border-radius: 0.2rem;
+  font-size: 1.3rem;
+  text-decoration: underline;
+  background: transparent;
+  cursor: pointer;
+  margin-bottom: 2.5em;
+  margin-top: 0;
 }
 
 .form {
@@ -98,6 +72,8 @@
   text-decoration: underline;
   background: transparent;
   cursor: pointer;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
 }
 .clear:focus {
   outline: 2px solid var(--black);
@@ -158,6 +134,8 @@
   border-color: var(--accent);
   background: var(--accent);
 }
+
+/* TODO: Make a footer with gh links... */
 
 .footer {
   width: 100%;

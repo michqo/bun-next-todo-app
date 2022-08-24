@@ -7,6 +7,7 @@ import styles from "../styles/Home.module.css";
 import Form from "../components/Form";
 import Todos from "../components/Todos";
 import useStorage from "../other/useStorage";
+import Link from "next/link";
 
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
@@ -69,8 +70,11 @@ export default function Home({}): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Todo app</h1>
+      <main>
+        <h1>Todo app</h1>
+        <Link href="/about">
+          <a>About</a>
+        </Link>
 
         <Form title={title} setTitle={setTitle} addTodo={addTodo} />
         <button className={styles.clear} onClick={removeTodos}>
