@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
@@ -7,7 +8,6 @@ import styles from "../styles/Home.module.css";
 import Form from "../components/Form";
 import Todos from "../components/Todos";
 import useStorage from "../other/useStorage";
-import Link from "next/link";
 
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
