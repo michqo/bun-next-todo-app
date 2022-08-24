@@ -24,6 +24,8 @@ a {
   border: 2px solid var(--black);
   border-radius: 0.2rem;
   background: transparent;
+  padding: 0.5rem 0.4rem;
+  margin-left: 0.5rem;
 }
 .form input[type="text"]:focus {
   outline: 1px solid var(--black);
@@ -33,10 +35,6 @@ a {
 .form input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 50px var(--white) inset;
   -webkit-text-fill-color: #333;
-}
-.form input[type="text"] {
-  padding: 0.5rem 0.4rem;
-  margin-left: 0.5rem;
 }
 
 .submit {
@@ -85,13 +83,15 @@ a {
   justify-content: center;
   margin-top: 2rem;
 }
+
 .todo {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin: 0.6rem 0;
+  margin: 0.6em 0;
 }
+
 .remove {
   margin-left: 10rem;
   border: none;

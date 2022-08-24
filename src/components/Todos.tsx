@@ -1,6 +1,6 @@
+import React from "react";
 import { Droppable, Draggable } from "react-beautiful-dnd";
 
-import React from "react";
 import { TodosType, TodoType } from "../pages";
 import styles from "../styles/Home.module.css";
 import Checkbox from "./controls/checkbox";
