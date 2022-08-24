@@ -40,8 +40,8 @@ You can start editing the page by modifying `src/pages/index.tsx`. The page auto
 - Add, remove todos
 - Mark todos as done
 - Drag and drop todos
-- Accessible
 - Save todos in local storage
+- Open source
 
 ## Screenshot
 
