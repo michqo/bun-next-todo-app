@@ -21,13 +21,13 @@ export default function Checkbox({ todo, toggleTodo }: Props) {
           todo[1] ? styles.checkbox_active : ""
         }`}
         aria-hidden="true"
-        viewBox="0 0 15 11"
+        viewBox="0 0 11 10"
         fill="none"
       >
         <path
-          d="M 2 5 L 5 9, 6 8, 13 2"
+          d="M1.5 6.15L3.68182 8.4L9.5 2.4"
           strokeWidth="2"
-          strokeLinecap="round"
+          strokeLinecap="square"
           stroke={todo[1] ? "#f4f4f5" : "none"}
         />
       </svg>
