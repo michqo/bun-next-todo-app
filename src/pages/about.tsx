@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+
+import Transition from "../components/Transition";
 import styles from "../styles/About.module.css";
 
 export default function About({}): JSX.Element {
@@ -18,22 +20,24 @@ export default function About({}): JSX.Element {
 
       <main>
         <h1>Todo app</h1>
-        <article>
-          <section>
-            <h2>About</h2>
-            <p>A dead simple todo app bootstrapped with bun.</p>
-          </section>
-          <section>
-            <h2>Features</h2>
-            <ul>
-              <li>Add, remove todos</li>
-              <li>Mark todos as done</li>
-              <li>Drag and drop todos</li>
-              <li>Save todos in local storage</li>
-              <li>Open source</li>
-            </ul>
-          </section>
-        </article>
+        <Transition>
+          <article>
+            <section>
+              <h2>About</h2>
+              <p>A dead simple todo app bootstrapped with bun.</p>
+            </section>
+            <section>
+              <h2>Features</h2>
+              <ul>
+                <li>Add, remove todos</li>
+                <li>Mark todos as done</li>
+                <li>Drag and drop todos</li>
+                <li>Save todos in local storage</li>
+                <li>Open source</li>
+              </ul>
+            </section>
+          </article>
+        </Transition>
       </main>
     </div>
   );

@@ -5,9 +5,10 @@ import { v4 as uuidv4 } from "uuid";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 
 import styles from "../styles/Home.module.css";
+import useStorage from "../other/useStorage";
 import Form from "../components/Form";
 import Todos from "../components/Todos";
-import useStorage from "../other/useStorage";
+import Transition from "../components/Transition";
 
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
@@ -76,19 +77,21 @@ export default function Home({}): JSX.Element {
           <a>About</a>
         </Link>
 
-        <Form title={title} setTitle={setTitle} addTodo={addTodo} />
-        <button className={styles.clear} onClick={removeTodos}>
-          Clear
-        </button>
-        {todos != [] && (
-          <DragDropContext onDragEnd={onDragEnd}>
-            <Todos
-              removeTodo={removeTodo}
-              toggleTodo={toggleTodo}
-              todos={todos}
-            />
-          </DragDropContext>
-        )}
+        <Transition>
+          <Form title={title} setTitle={setTitle} addTodo={addTodo} />
+          <button className={styles.clear} onClick={removeTodos}>
+            Clear
+          </button>
+          {todos != [] && (
+            <DragDropContext onDragEnd={onDragEnd}>
+              <Todos
+                removeTodo={removeTodo}
+                toggleTodo={toggleTodo}
+                todos={todos}
+              />
+            </DragDropContext>
+          )}
+        </Transition>
       </main>
     </div>
   );
