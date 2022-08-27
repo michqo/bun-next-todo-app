@@ -113,29 +113,39 @@ a {
   outline-width: 1px;
 }
 
-.hidden_checkbox {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
+label {
+  position: relative;
+  user-select: none;
+}
+
+label:focus-within .checkbox {
+  outline: max(2px, 0.1em) solid var(--black);
+  outline-offset: max(2px, 0.15em);
+}
+
+.checkbox_hidden {
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+}
+
+.checkbox_hidden:checked + .checkbox {
+  border-color: var(--accent);
+  background: var(--accent);
 }
 
 .checkbox {
   display: inline-block;
-  vertical-align: top; /* solve weird align */
+  vertical-align: top; /* solves weird align */
   height: 20px;
   width: 20px;
   background: #fff;
   border: 2px #ddd solid;
   margin-right: 0.5em;
-}
-
-.checkbox_active {
-  border-color: var(--accent);
-  background: var(--accent);
+  transition: 120ms ease-in-out;
 }
 
 /* TODO: Make a footer with gh links... */

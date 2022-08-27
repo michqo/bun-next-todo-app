@@ -8,27 +8,22 @@ type Props = {
 
 export default function Checkbox({ todo, toggleTodo }: Props) {
   return (
-    <label style={todo[1] ? { textDecorationLine: "line-through" } : {}}>
+    <label>
       <input
         type="checkbox"
-        className={styles.hidden_checkbox}
+        className={styles.checkbox_hidden}
+        checked={todo[1]}
         onChange={() => {
           toggleTodo(todo[2]);
         }}
       />
       <svg
-        className={`${styles.checkbox} ${
-          todo[1] ? styles.checkbox_active : ""
-        }`}
+        className={styles.checkbox}
         aria-hidden="true"
         viewBox="0 0 20 20"
         fill="none"
       >
-        <path
-          d="M2 9.88L7.12 15L18 4"
-          strokeWidth="3"
-          stroke={todo[1] ? "#f4f4f5" : "none"}
-        />
+        <path d="M2 9.88L7.12 15L18 4" strokeWidth="3" stroke="#fff" />
       </svg>
       {todo[0]}
     </label>
