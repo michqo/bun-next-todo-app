@@ -8,7 +8,7 @@ type Props = {
 
 export default function Checkbox({ todo, toggleTodo }: Props) {
   return (
-    <label className={styles.checked}>
+    <label style={todo[1] ? { textDecorationLine: "line-through" } : {}}>
       <input
         type="checkbox"
         className={styles.checkbox_hidden}
