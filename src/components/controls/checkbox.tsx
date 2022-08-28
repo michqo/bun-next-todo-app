@@ -8,7 +8,7 @@ type Props = {
 
 export default function Checkbox({ todo, toggleTodo }: Props) {
   return (
-    <label>
+    <label className={styles.checked}>
       <input
         type="checkbox"
         className={styles.checkbox_hidden}
