@@ -5,7 +5,7 @@
     "@types/react-beautiful-dnd": "^13.1.2",
     "@types/uuid": "^8.3.4",
     "framer-motion": "^7.2.1",
-    "next": "12.0.2",
+    "next": "12.2.0",
     "react": "^18",
     "react-beautiful-dnd": "^13.1.0",
     "react-dom": "^18",
@@ -14,9 +14,13 @@
   },
   "devDependencies": {
     "@types/react": "^18",
-    "bun-framework-next": "^12.2.4",
-    "typescript": "latest",
-    "react-refresh": "0.10.0"
+    "bun-framework-next": "^12.2",
+    "typescript": "latest"
+  },
+  "bun-create": {
+    "postinstall": [
+      "bun bun --use next"
+    ]
   },
   "module": "index.js"
 }
