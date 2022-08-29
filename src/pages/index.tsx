@@ -9,6 +9,7 @@ import useStorage from "../other/useStorage";
 import Form from "../components/Form";
 import Todos from "../components/Todos";
 import Transition from "../components/Transition";
+import Footer from "../components/Footer";
 
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
@@ -74,7 +75,7 @@ export default function Home({}): JSX.Element {
       <main>
         <h1>Todo app</h1>
         <Link href="/about">
-          <a>About</a>
+          <a className={styles.link}>About</a>
         </Link>
 
         <Transition>
@@ -93,6 +94,8 @@ export default function Home({}): JSX.Element {
           )}
         </Transition>
       </main>
+
+      <Footer />
     </div>
   );
 }
