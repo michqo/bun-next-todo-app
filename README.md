@@ -54,3 +54,7 @@ You can start editing the page by modifying `src/pages/index.tsx`. The page auto
 ![screenshot](/assets/screenshot.png)
 
 ![screenshot2](/assets/screenshot2.png)
+
+|                Desktop                |                 Mobile                  |
+| :-----------------------------------: | :-------------------------------------: |
+| ![screenshot](/assets/screenshot.png) | ![screenshot2](/assets/screenshot2.png) |
