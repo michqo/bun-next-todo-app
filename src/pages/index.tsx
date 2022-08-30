@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 
 import styles from "../styles/Home.module.css";
+import "../styles/Mobile.module.css";
 import useStorage from "../other/useStorage";
 import Form from "../components/Form";
 import Todos from "../components/Todos";

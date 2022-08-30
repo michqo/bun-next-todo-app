@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 
 import Transition from "../components/Transition";
 import styles from "../styles/About.module.css";
+import "../styles/Mobile.module.css";
 
 export default function About({}): JSX.Element {
   return (
