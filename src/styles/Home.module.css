@@ -183,3 +183,15 @@ label:focus-within .checkbox {
   outline: max(2px, 0.1em) solid var(--accent);
   outline-offset: max(2px, 0.15em);
 }
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8em 1em;
+  /* border-bottom: 1px solid var(--accent); */
+  background: var(--accent);
+}

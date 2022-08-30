@@ -10,6 +10,7 @@ import Form from "../components/Form";
 import Todos from "../components/Todos";
 import Transition from "../components/Transition";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
@@ -71,6 +72,8 @@ export default function Home({}): JSX.Element {
         <meta name="description" content="Todo app bootstrapped with Bun" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Header />
 
       <main>
         <h1>Todo app</h1>
