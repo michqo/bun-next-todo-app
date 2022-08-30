@@ -49,6 +49,8 @@ You can start editing the page by modifying `src/pages/index.tsx`. The page auto
 - Save todos in local storage
 - Open source
 
-## Screenshot
+## Screenshots
 
 ![screenshot](/assets/screenshot.png)
+
+![screenshot2](/assets/screenshot2.png)
