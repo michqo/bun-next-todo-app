@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 import Transition from "../components/Transition";
 import styles from "../styles/About.module.css";
@@ -17,6 +19,8 @@ export default function About({}): JSX.Element {
       <Link href="/">
         <a className={styles.top}>← Back</a>
       </Link>
+
+      <Header />
 
       <main>
         <h1>Todo app</h1>
@@ -39,6 +43,8 @@ export default function About({}): JSX.Element {
           </article>
         </Transition>
       </main>
+
+      <Footer />
     </div>
   );
 }

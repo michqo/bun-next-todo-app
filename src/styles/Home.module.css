@@ -10,7 +10,6 @@
 }
 
 .form {
-  /* margin: 0 2rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,8 +23,6 @@
   border: 2px solid var(--black);
   border-radius: 0.2rem;
   background: transparent;
-  padding: 0.5rem 0.4rem;
-  margin-left: 0.5rem;
 }
 .form input[type="text"]:focus {
   outline: 1px solid var(--black);
@@ -79,9 +76,10 @@
 
 .todos {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   margin-top: 2rem;
+  padding: 0;
 }
 
 .todo {
@@ -149,7 +147,7 @@ label:focus-within .checkbox {
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: calc(100% - 4em);
   border-top: 1px solid var(--accent);
@@ -185,13 +183,54 @@ label:focus-within .checkbox {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.8em 1em;
-  /* border-bottom: 1px solid var(--accent); */
   background: var(--accent);
+}
+
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 3.2em;
+    margin-top: 2em;
+  }
+  main {
+    padding: 0.8em 0.5em;
+  }
+  .link {
+    font-size: 1.2em;
+    margin-bottom: 2.4em;
+  }
+  .form {
+    flex-direction: column;
+  }
+  .form input[type="text"] {
+    padding: 0.4rem 0.3rem;
+  }
+  .todos {
+    margin-top: 1rem;
+  }
+  .todo {
+    margin: 0.4em 0;
+  }
+  .remove {
+    margin-left: 3.5em;
+  }
+  .footer {
+    padding: 0.2em 0.3em;
+  }
+  .footer div {
+    margin: 0 1em;
+  }
+  .footer p {
+    font-size: 0.8em;
+  }
+  .footer svg {
+    width: 18px;
+    height: 18px;
+  }
 }

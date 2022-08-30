@@ -1,7 +1,8 @@
 .top {
-  position: absolute;
-  top: 1rem;
+  position: fixed;
+  top: 1.8em;
   font-size: 1.4em;
+  text-decoration: underline;
   color: var(--accent);
 }
 
@@ -12,20 +13,17 @@ h2 {
   text-align: center;
 }
 
-p {
-  margin: 0;
-  font-size: 1.1em;
-}
-
-article {
-  margin-top: 2.9em;
-}
-
 section {
-  margin: 0.5em 0;
+  margin: 1em 0;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+section p {
+  text-align: center;
+  margin: 0;
+  font-size: 1.1em;
 }
 
 ul {
@@ -34,4 +32,29 @@ ul {
 
 li {
   margin-bottom: 0.6em;
+}
+
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 3.2em;
+  }
+  main {
+    padding: 0.8em 0.5em;
+  }
+  .top {
+    font-size: 1.2em;
+  }
+  section p {
+    font-size: 1em;
+  }
+  h2 {
+    font-size: 1.8em;
+    margin: 0.5em 0;
+  }
+  article {
+    margin-top: 2em;
+  }
+  li {
+    margin-bottom: 0.2em;
+  }
 }

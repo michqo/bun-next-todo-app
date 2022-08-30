@@ -34,7 +34,7 @@ a {
 
 h1 {
   text-align: center;
-  font-size: 5rem;
+  font-size: 5em;
   color: var(--accent);
   margin-bottom: 0;
 }
@@ -44,7 +44,7 @@ li {
 }
 
 main {
-  padding: 5rem 0;
+  padding: 5em 0;
   flex: 1;
   display: flex;
   flex-direction: column;
