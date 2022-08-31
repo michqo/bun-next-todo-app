@@ -1,4 +1,4 @@
-# Bun demo app
+# Bun todo app
 
 This is a Todo app using [Next.js](https://nextjs.org/) bootstrapped with Bun.
 
