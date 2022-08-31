@@ -88,7 +88,8 @@
   align-items: center;
   justify-content: space-between;
   gap: 5em;
-  margin: 0.6em 0;
+  padding: 0.3rem 0.6rem;
+  margin: 0.4em 0;
 }
 
 .remove {
@@ -208,6 +209,8 @@ label:focus-within .checkbox {
     margin-top: 1rem;
   }
   .todo {
+    transition: background-color 0.1s;
+
     margin: 0.4em 0;
     gap: 2em;
   }

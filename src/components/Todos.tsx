@@ -17,14 +17,23 @@ function Todo(
   index: number
 ) {
   const key = todo[2].toString();
+
   return (
     <Draggable key={key} draggableId={key} index={index}>
-      {(provided) => (
+      {(provided, snapshot) => (
         <li
           {...provided.draggableProps}
           {...provided.dragHandleProps}
           ref={provided.innerRef}
           className={styles.todo}
+          style={
+            snapshot.isDragging
+              ? {
+                  background: "var(--hover)",
+                  ...provided.draggableProps.style,
+                }
+              : { ...provided.draggableProps.style }
+          }
         >
           <Checkbox todo={todo} toggleTodo={toggleTodo} />
           <button className={styles.remove} onClick={() => removeTodo(todo[2])}>
