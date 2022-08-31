@@ -79,7 +79,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 2rem;
-  padding: 0;
+  padding: 0.5em;
 }
 
 .todo {
@@ -87,11 +87,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  gap: 5em;
   margin: 0.6em 0;
 }
 
 .remove {
-  margin-left: 10rem;
   border: none;
   border-radius: 0.4rem;
   background-color: transparent;
@@ -99,7 +99,6 @@
   font-weight: 900;
   color: #e41919;
   padding: 0.3rem 0.5rem;
-  display: inline-block;
   transition: all 0.1s ease-in-out;
 }
 .remove:hover {
@@ -209,9 +208,7 @@ label:focus-within .checkbox {
   }
   .todo {
     margin: 0.4em 0;
-  }
-  .remove {
-    margin-left: 3.5em;
+    gap: 2em;
   }
   .footer {
     padding: 0.2em 0.3em;
