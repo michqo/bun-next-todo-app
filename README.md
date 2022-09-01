@@ -40,15 +40,6 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
 
-## About
-
-- Basic todo app
-- Add, remove todos
-- Mark todos as done
-- Drag and drop todos
-- Save todos in local storage
-- Open source
-
 ## Screenshots
 
 |                Desktop                |                 Mobile                  |
