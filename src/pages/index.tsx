@@ -16,7 +16,7 @@ import Header from "../components/Header";
 export type TodoType = [string, boolean, string];
 export type TodosType = TodoType[];
 
-export default function Home({}): JSX.Element {
+export default function Home({}) {
   const [todos, setTodos] = useState<TodosType>([]);
   const [title, setTitle] = useState("");
   const { getItem, setItem, removeItem } = useStorage();

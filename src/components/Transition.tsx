@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/dist/client/router";
 
-export default function Transition({ children }): JSX.Element {
+export default function Transition({ children }) {
   const { asPath } = useRouter();
   const variants = {
     hidden: { opacity: 0, x: 0, y: -180 },

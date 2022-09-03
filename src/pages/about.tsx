@@ -8,7 +8,7 @@ import Transition from "../components/Transition";
 import styles from "../styles/About.module.css";
 import "../styles/Mobile.module.css";
 
-export default function About({}): JSX.Element {
+export default function About({}) {
   return (
     <div className={styles.container}>
       <Head>

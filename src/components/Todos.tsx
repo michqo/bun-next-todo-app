@@ -26,14 +26,10 @@ function Todo(
           {...provided.dragHandleProps}
           ref={provided.innerRef}
           className={styles.todo}
-          style={
-            snapshot.isDragging
-              ? {
-                  background: "var(--hover)",
-                  ...provided.draggableProps.style,
-                }
-              : { ...provided.draggableProps.style }
-          }
+          style={{
+            background: snapshot.isDragging ? "var(--hover)" : "transparent",
+            ...provided.draggableProps.style,
+          }}
         >
           <Checkbox todo={todo} toggleTodo={toggleTodo} />
           <button className={styles.remove} onClick={() => removeTodo(todo[2])}>
