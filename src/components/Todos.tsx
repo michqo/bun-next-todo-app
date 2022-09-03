@@ -1,5 +1,6 @@
 import React from "react";
 import { Droppable, Draggable } from "react-beautiful-dnd";
+import { motion, AnimatePresence } from "framer-motion";
 
 import { TodosType, TodoType } from "../pages";
 import styles from "../styles/Home.module.css";
@@ -21,21 +22,30 @@ function Todo(
   return (
     <Draggable key={key} draggableId={key} index={index}>
       {(provided, snapshot) => (
-        <li
-          {...provided.draggableProps}
-          {...provided.dragHandleProps}
-          ref={provided.innerRef}
-          className={styles.todo}
-          style={{
-            background: snapshot.isDragging ? "var(--hover)" : "transparent",
-            ...provided.draggableProps.style,
-          }}
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
         >
-          <Checkbox todo={todo} toggleTodo={toggleTodo} />
-          <button className={styles.remove} onClick={() => removeTodo(todo[2])}>
-            X
-          </button>
-        </li>
+          <li
+            {...provided.draggableProps}
+            {...provided.dragHandleProps}
+            ref={provided.innerRef}
+            className={styles.todo}
+            style={{
+              background: snapshot.isDragging ? "var(--hover)" : "transparent",
+              ...provided.draggableProps.style,
+            }}
+          >
+            <Checkbox todo={todo} toggleTodo={toggleTodo} />
+            <button
+              className={styles.remove}
+              onClick={() => removeTodo(todo[2])}
+            >
+              X
+            </button>
+          </li>
+        </motion.div>
       )}
     </Draggable>
   );
@@ -50,7 +60,9 @@ export default function Todos(props: TodoProps) {
           ref={provided.innerRef}
           className={styles.todos}
         >
-          {props.todos.map((value, index) => Todo(props, value, index))}
+          <AnimatePresence>
+            {props.todos.map((value, index) => Todo(props, value, index))}
+          </AnimatePresence>
           {provided.placeholder}
         </ul>
       )}
