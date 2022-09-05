@@ -30,15 +30,27 @@ or
 bun bun --use next
 ```
 
-and then
-
-```
-bun dev
-```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `src/pages/index.tsx`. The page auto-updates as you edit the file.
+
+## Run with docker
+
+### Build an image
+
+```
+docker build .
+```
+
+### Create and run a container
+
+```
+docker run -d -p 3000:3000 container_id_or_name
+```
+
+### Note
+
+The image just runs the bun dev server.
 
 ## Screenshots
 
