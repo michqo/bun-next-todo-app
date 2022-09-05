@@ -41,7 +41,7 @@ docker build .
 ### Create and run a container
 
 ```
-docker run -d -p 3000:3000 container_id_or_name
+docker run -d -p 3000:3000 image_id_or_name
 ```
 
 **Note**: The image just runs the bun dev server.
